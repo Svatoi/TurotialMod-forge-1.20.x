@@ -39,6 +39,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.SAPPHIRE_FENCE_GATE);
 
         trapdoorItem(ModBlocks.SAPPHIRE_TRAPDOOR);
+
+        handleItem(ModItems.SAPPHIRE_AXE);
+        handleItem(ModItems.SAPPHIRE_PICKAXE);
+        handleItem(ModItems.SAPPHIRE_HOE);
+        handleItem(ModItems.SAPPHIRE_SHOVEL);
+        handleItem(ModItems.SAPPHIRE_SWORD);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
@@ -69,6 +75,11 @@ public class ModItemModelProvider extends ItemModelProvider {
     public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall", modLoc("block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder handleItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),mcLoc("item/handheld"))
+                .texture("layer0", modLoc("item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
