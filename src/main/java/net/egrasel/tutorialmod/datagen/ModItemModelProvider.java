@@ -29,21 +29,16 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItem(ModBlocks.SAPPHIRE_DOOR);
 
-        fenceInventory("sapphire_fence", modLoc("block/sapphire_block"));
-        buttonInventory("sapphire_button", modLoc("block/sapphire_block"));
-        wallInventory("sapphire_wall", modLoc("block/sapphire_block"));
-        trapdoorBottom("sapphire_trapdoor", modLoc("block/sapphire_trapdoor"));
-
-//        fenceItem(ModBlocks.SAPPHIRE_FENCE, ModBlocks.SAPPHIRE_BLOCK);
-//        buttonItem(ModBlocks.SAPPHIRE_BUTTON, ModBlocks.SAPPHIRE_BLOCK);
-//        wallItem(ModBlocks.SAPPHIRE_WALL, ModBlocks.SAPPHIRE_BLOCK);
+        fenceItem(ModBlocks.SAPPHIRE_FENCE, ModBlocks.SAPPHIRE_BLOCK);
+        buttonItem(ModBlocks.SAPPHIRE_BUTTON, ModBlocks.SAPPHIRE_BLOCK);
+        wallItem(ModBlocks.SAPPHIRE_WALL, ModBlocks.SAPPHIRE_BLOCK);
 
         evenSimplerBlockItem(ModBlocks.SAPPHIRE_STAIRS);
         evenSimplerBlockItem(ModBlocks.SAPPHIRE_SLAB);
         evenSimplerBlockItem(ModBlocks.SAPPHIRE_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.SAPPHIRE_FENCE_GATE);
 
-//        trapdoorItem(ModBlocks.SAPPHIRE_TRAPDOOR);
+        trapdoorItem(ModBlocks.SAPPHIRE_TRAPDOOR);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
@@ -58,7 +53,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     public void trapdoorItem(RegistryObject<Block> block) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
-                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_botoom"));
+                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom"));
     }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
