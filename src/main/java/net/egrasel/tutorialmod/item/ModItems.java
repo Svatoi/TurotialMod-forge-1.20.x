@@ -3,6 +3,7 @@ package net.egrasel.tutorialmod.item;
 import net.egrasel.tutorialmod.TutorialMod;
 import net.egrasel.tutorialmod.item.custom.FuelItem;
 import net.egrasel.tutorialmod.item.custom.MetalDetectorItem;
+import net.egrasel.tutorialmod.item.custom.ModArmorItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -43,7 +44,7 @@ public class ModItems {
             () -> new HoeItem(ModToolTiers.SAPPHIRE, 4, 2, new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
-            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+            () -> new ModArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate",
             () -> new ArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings",
