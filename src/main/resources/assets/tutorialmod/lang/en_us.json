@@ -12,6 +12,11 @@
   "item.tutorialmod.sapphire_sword": "Sapphire Sword",
   "item.tutorialmod.sapphire_hoe": "Sapphire Hoe",
 
+  "item.tutorialmod.sapphire_helmet": "Sapphire Helmet",
+  "item.tutorialmod.sapphire_chestplate": "Sapphire Chestplate",
+  "item.tutorialmod.sapphire_leggings": "Sapphire Leggings",
+  "item.tutorialmod.sapphire_boots": "Sapphire Boots",
+
   "item.tutorialmod.metal_detector": "Metal Detector",
   "tooltip.tutorialmod.metal_detector.tooltip": "Finds valuables undergrounds",
 
