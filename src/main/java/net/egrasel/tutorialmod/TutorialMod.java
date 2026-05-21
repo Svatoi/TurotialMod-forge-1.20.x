@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.egrasel.tutorialmod.block.ModBlocks;
 import net.egrasel.tutorialmod.item.ModCreativeModTabs;
 import net.egrasel.tutorialmod.item.ModItems;
+import net.egrasel.tutorialmod.loot.ModLootModifiers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,6 +36,8 @@ public class TutorialMod
 
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
