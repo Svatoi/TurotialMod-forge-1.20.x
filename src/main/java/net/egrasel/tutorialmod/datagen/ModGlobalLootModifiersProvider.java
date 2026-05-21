@@ -3,6 +3,7 @@ package net.egrasel.tutorialmod.datagen;
 import net.egrasel.tutorialmod.TutorialMod;
 import net.egrasel.tutorialmod.item.ModItems;
 import net.egrasel.tutorialmod.loot.AddItemModifier;
+import net.egrasel.tutorialmod.loot.AddSusSandModifier;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
@@ -26,11 +27,15 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.PINE_CONE.get()));
 
         add("pine_cone_from_creeper", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("entities/creeper")).build()
+                new LootTableIdCondition.Builder(new ResourceLocation("minecraft", "entities/creeper")).build()
         }, ModItems.PINE_CONE.get()));
 
         add("metal_detector_from_jungle_temples", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build()
+                new LootTableIdCondition.Builder(new ResourceLocation("minecraft", "chests/jungle_temple")).build()
+        }, ModItems.METAL_DETECTOR.get()));
+        
+        add("metal_detector_from_suspicious_sand", new AddSusSandModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("minecraft", "archaeology/desert_pyramid")).build()
         }, ModItems.METAL_DETECTOR.get()));
 
     }
