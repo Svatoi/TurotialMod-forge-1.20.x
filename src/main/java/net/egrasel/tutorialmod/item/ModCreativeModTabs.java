@@ -42,6 +42,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.NETHER_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.END_STONE_SAPPHIRE_ORE.get());
 
+                        pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
+
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
 
                         pOutput.accept(ModBlocks.SAPPHIRE_STAIRS.get());
