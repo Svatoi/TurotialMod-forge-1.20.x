@@ -47,6 +47,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.CORN_SEEDS.get());
                         pOutput.accept(ModItems.CORN.get());
 
+                        pOutput.accept(ModBlocks.CATMINT.get());
+
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
 
                         pOutput.accept(ModBlocks.SAPPHIRE_STAIRS.get());
