@@ -5,6 +5,7 @@ import net.egrasel.tutorialmod.block.ModBlocks;
 import net.egrasel.tutorialmod.item.ModCreativeModTabs;
 import net.egrasel.tutorialmod.item.ModItems;
 import net.egrasel.tutorialmod.loot.ModLootModifiers;
+import net.egrasel.tutorialmod.villager.ModVillagers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -41,6 +42,7 @@ public class TutorialMod
         ModBlocks.BLOCKS.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

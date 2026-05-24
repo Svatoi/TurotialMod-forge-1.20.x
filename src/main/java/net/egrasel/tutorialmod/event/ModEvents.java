@@ -3,6 +3,7 @@ package net.egrasel.tutorialmod.event;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.egrasel.tutorialmod.TutorialMod;
 import net.egrasel.tutorialmod.item.ModItems;
+import net.egrasel.tutorialmod.villager.ModVillagers;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.EnchantedBookItem;
@@ -38,7 +39,9 @@ public class ModEvents {
                     new ItemStack(Items.EMERALD, 1),
                     new ItemStack(ModItems.CORN.get(), 6),
                     12, 4, 0.035f));
-        } else if (event.getType() == VillagerProfession.TOOLSMITH) {
+        }
+
+        if (event.getType() == VillagerProfession.TOOLSMITH) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades =  event.getTrades();
 
             // Level 3
@@ -46,7 +49,9 @@ public class ModEvents {
                     new ItemStack(ModItems.SAPPHIRE.get(), 24),
                     new ItemStack(ModItems.METAL_DETECTOR.get(), 1),
                     2, 15, 0.050f));
-        } else if (event.getType() == VillagerProfession.LIBRARIAN) {
+        }
+
+        if (event.getType() == VillagerProfession.LIBRARIAN) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades =  event.getTrades();
             ItemStack enchantedBook = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(Enchantments.KNOCKBACK, 10));
 
@@ -55,6 +60,16 @@ public class ModEvents {
                     new ItemStack(Items.EMERALD, 52),
                     enchantedBook,
                     5, 15, 0.050f));
+        }
+
+        if (event.getType() == ModVillagers.SOUND_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades =  event.getTrades();
+
+            // Level 1
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 9),
+                    new ItemStack(Items.MUSIC_DISC_13, 1),
+                    3, 10, 0.02f));
         }
     }
 

@@ -48,5 +48,7 @@
 
   "block.tutorialmod.sound_block": "Sound Block",
 
+  "entity.minecraft.villager.tutorialmod.soundmaster": "Sound Master",
+
   "creativetab.tutorial_tab": "Sapphire Tutorial Tab"
 }
