@@ -49,6 +49,8 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModBlocks.CATMINT.get());
 
+                        pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
+
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
 
                         pOutput.accept(ModBlocks.SAPPHIRE_STAIRS.get());

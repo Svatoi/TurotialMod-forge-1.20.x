@@ -22,6 +22,8 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_PLACE = registerSoundEvent("sound_block_place");
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_HIT = registerSoundEvent("sound_block_hit");
 
+    public static final RegistryObject<SoundEvent> BAR_BRAWL = registerSoundEvent("bar_brawl");
+    
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
             ModSounds.SOUND_BLOCK_BREAK, ModSounds.SOUND_BLOCK_STEP,
             ModSounds.SOUND_BLOCK_PLACE, ModSounds.SOUND_BLOCK_HIT,
