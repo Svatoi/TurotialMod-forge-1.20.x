@@ -2,11 +2,14 @@ package net.egrasel.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.egrasel.tutorialmod.block.ModBlocks;
+import net.egrasel.tutorialmod.entity.ModEntites;
+import net.egrasel.tutorialmod.entity.client.RhinoRenderer;
 import net.egrasel.tutorialmod.item.ModCreativeModTabs;
 import net.egrasel.tutorialmod.item.ModItems;
 import net.egrasel.tutorialmod.loot.ModLootModifiers;
 import net.egrasel.tutorialmod.sound.ModSounds;
 import net.egrasel.tutorialmod.villager.ModVillagers;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -47,6 +50,8 @@ public class TutorialMod
 
         ModSounds.register(modEventBus);
 
+        ModEntites.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -75,8 +80,8 @@ public class TutorialMod
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntites.RHINO.get(), RhinoRenderer::new);
         }
     }
 }

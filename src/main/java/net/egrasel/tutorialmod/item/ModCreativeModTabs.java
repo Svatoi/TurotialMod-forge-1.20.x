@@ -51,6 +51,8 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
 
+                        pOutput.accept(ModItems.RHINO_SPAWN_EGG.get());
+
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
 
                         pOutput.accept(ModBlocks.SAPPHIRE_STAIRS.get());
