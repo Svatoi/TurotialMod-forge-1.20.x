@@ -2,7 +2,6 @@ package net.egrasel.tutorialmod.entity;
 
 import net.egrasel.tutorialmod.TutorialMod;
 import net.egrasel.tutorialmod.entity.custom.RhinoEntity;
-import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -10,7 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModEntites {
+public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, TutorialMod.MOD_ID);
 

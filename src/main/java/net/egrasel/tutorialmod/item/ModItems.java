@@ -2,7 +2,7 @@ package net.egrasel.tutorialmod.item;
 
 import net.egrasel.tutorialmod.TutorialMod;
 import net.egrasel.tutorialmod.block.ModBlocks;
-import net.egrasel.tutorialmod.entity.ModEntites;
+import net.egrasel.tutorialmod.entity.ModEntities;
 import net.egrasel.tutorialmod.item.custom.FuelItem;
 import net.egrasel.tutorialmod.item.custom.MetalDetectorItem;
 import net.egrasel.tutorialmod.item.custom.ModArmorItem;
@@ -68,7 +68,7 @@ public class ModItems {
             () -> new RecordItem(6, ModSounds.BAR_BRAWL, new Item.Properties().stacksTo(1), 2448));
 
     public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntites.RHINO, 0x7e9680, 0xc5d1c6,
+            () -> new ForgeSpawnEggItem(ModEntities.RHINO, 0x7e9680, 0xc5d1c6,
                     new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {

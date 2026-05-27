@@ -2,7 +2,7 @@ package net.egrasel.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.egrasel.tutorialmod.block.ModBlocks;
-import net.egrasel.tutorialmod.entity.ModEntites;
+import net.egrasel.tutorialmod.entity.ModEntities;
 import net.egrasel.tutorialmod.entity.client.RhinoRenderer;
 import net.egrasel.tutorialmod.item.ModCreativeModTabs;
 import net.egrasel.tutorialmod.item.ModItems;
@@ -50,7 +50,7 @@ public class TutorialMod
 
         ModSounds.register(modEventBus);
 
-        ModEntites.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -81,7 +81,7 @@ public class TutorialMod
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(ModEntites.RHINO.get(), RhinoRenderer::new);
+            EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
         }
     }
 }
