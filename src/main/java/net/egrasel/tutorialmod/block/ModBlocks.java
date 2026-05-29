@@ -2,14 +2,13 @@ package net.egrasel.tutorialmod.block;
 
 import net.egrasel.tutorialmod.TutorialMod;
 import net.egrasel.tutorialmod.block.custom.CornCropBlock;
+import net.egrasel.tutorialmod.block.custom.GemPolishingStationBlock;
 import net.egrasel.tutorialmod.block.custom.SoundBlock;
 import net.egrasel.tutorialmod.block.custom.StrawberryCropBlock;
 import net.egrasel.tutorialmod.item.ModItems;
 import net.egrasel.tutorialmod.sound.ModSounds;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -87,6 +86,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_CATMINT = BLOCKS.register("potted_catmint",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CATMINT,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+    public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
+            () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
