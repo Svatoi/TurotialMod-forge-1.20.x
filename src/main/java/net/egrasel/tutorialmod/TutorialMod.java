@@ -8,6 +8,7 @@ import net.egrasel.tutorialmod.entity.client.RhinoRenderer;
 import net.egrasel.tutorialmod.item.ModCreativeModTabs;
 import net.egrasel.tutorialmod.item.ModItems;
 import net.egrasel.tutorialmod.loot.ModLootModifiers;
+import net.egrasel.tutorialmod.recipe.ModRecipes;
 import net.egrasel.tutorialmod.screen.GemPolishingStationScreen;
 import net.egrasel.tutorialmod.screen.ModMenuTypes;
 import net.egrasel.tutorialmod.sound.ModSounds;
@@ -57,6 +58,8 @@ public class TutorialMod
         ModEntities.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
 
