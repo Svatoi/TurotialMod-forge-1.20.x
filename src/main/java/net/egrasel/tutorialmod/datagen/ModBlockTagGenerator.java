@@ -6,6 +6,7 @@ import net.egrasel.tutorialmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -54,5 +55,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SAPPHIRE_FENCE_GATE.get());
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.SAPPHIRE_WALL.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.PINE_LOG.get())
+                .add(ModBlocks.PINE_WOOD.get())
+                .add(ModBlocks.STRIPPED_PINE_LOG.get())
+                .add(ModBlocks.STRIPPED_PINE_WOOD.get());
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.PINE_PLANKS.get());
     }
 }
