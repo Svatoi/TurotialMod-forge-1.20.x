@@ -1,6 +1,8 @@
 package net.egrasel.tutorialmod.event;
 
 import net.egrasel.tutorialmod.TutorialMod;
+import net.egrasel.tutorialmod.block.entity.ModBlockEntities;
+import net.egrasel.tutorialmod.block.entity.render.GemPolishingBlockEntityRenderer;
 import net.egrasel.tutorialmod.entity.client.ModModelLayers;
 import net.egrasel.tutorialmod.entity.client.RhinoModel;
 import net.minecraftforge.api.distmarker.Dist;
@@ -15,4 +17,8 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.RHINO_LAYER, RhinoModel::createBodyLayer);
     }
 
+    @SubscribeEvent
+    public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ModBlockEntities.GEM_POLISHING_BE.get(), GemPolishingBlockEntityRenderer::new);
+    }
 }
