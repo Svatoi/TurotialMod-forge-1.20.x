@@ -12,13 +12,13 @@ import net.egrasel.tutorialmod.recipe.ModRecipes;
 import net.egrasel.tutorialmod.screen.GemPolishingStationScreen;
 import net.egrasel.tutorialmod.screen.ModMenuTypes;
 import net.egrasel.tutorialmod.sound.ModSounds;
+import net.egrasel.tutorialmod.util.ModWoodTypes;
 import net.egrasel.tutorialmod.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -92,6 +92,8 @@ public class TutorialMod
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.PINE);
+
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
 
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);

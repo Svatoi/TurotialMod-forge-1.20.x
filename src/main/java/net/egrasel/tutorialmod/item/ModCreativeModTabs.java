@@ -82,6 +82,11 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.PINE_LEAVES.get());
                         pOutput.accept(ModBlocks.PINE_PLANKS.get());
 
+                        pOutput.accept(ModBlocks.PINE_SIGN.get());
+                        pOutput.accept(ModBlocks.PINE_WALL_SIGN.get());
+                        pOutput.accept(ModBlocks.PINE_HANGING_SIGN.get());
+                        pOutput.accept(ModBlocks.PINE_WALL_HANGING_SIGN.get());
+
                     })
                     .build());
 
