@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.egrasel.tutorialmod.block.ModBlocks;
 import net.egrasel.tutorialmod.block.entity.ModBlockEntities;
 import net.egrasel.tutorialmod.entity.ModEntities;
+import net.egrasel.tutorialmod.entity.client.ModBoatRenderer;
 import net.egrasel.tutorialmod.entity.client.RhinoRenderer;
 import net.egrasel.tutorialmod.item.ModCreativeModTabs;
 import net.egrasel.tutorialmod.item.ModItems;
@@ -95,6 +96,8 @@ public class TutorialMod
             Sheets.addWoodType(ModWoodTypes.PINE);
 
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+            EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
+            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
 
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
         }

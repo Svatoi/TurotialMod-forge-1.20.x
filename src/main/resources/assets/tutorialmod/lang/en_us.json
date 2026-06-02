@@ -11,6 +11,9 @@
   "item.tutorialmod.corn_seeds": "Corn Seeds",
   "item.tutorialmod.corn": "Corn",
 
+  "item.tutorialmod.pine_boat": "Pine Boat",
+  "item.tutorialmod.pine_chest_boat": "Pine Chest Boat",
+
   "item.tutorialmod.sapphire_axe": "Sapphire Axe",
   "item.tutorialmod.sapphire_pickaxe": "Sapphire Pickaxe",
   "item.tutorialmod.sapphire_shovel": "Sapphire Shovel",
@@ -66,6 +69,7 @@
   "block.tutorialmod.gem_polishing_station": "Gem Polishing Station",
 
   "entity.minecraft.villager.tutorialmod.soundmaster": "Sound Master",
+  "entity.tutorialmod.mod_chest_boat": "Boat with Chest",
 
   "sounds.tutorialmod.metal_detector_found_ore": "Metal detector found ore",
 
