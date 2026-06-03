@@ -4,10 +4,7 @@ import net.egrasel.tutorialmod.TutorialMod;
 import net.egrasel.tutorialmod.block.ModBlocks;
 import net.egrasel.tutorialmod.entity.ModEntities;
 import net.egrasel.tutorialmod.entity.custom.ModBoatEntity;
-import net.egrasel.tutorialmod.item.custom.FuelItem;
-import net.egrasel.tutorialmod.item.custom.MetalDetectorItem;
-import net.egrasel.tutorialmod.item.custom.ModArmorItem;
-import net.egrasel.tutorialmod.item.custom.ModBoatItem;
+import net.egrasel.tutorialmod.item.custom.*;
 import net.egrasel.tutorialmod.sound.ModSounds;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -82,6 +79,10 @@ public class ModItems {
             () -> new ModBoatItem(false, ModBoatEntity.Type.PINE, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> PINE_CHEST_BOAT = ITEMS.register("pine_chest_boat",
             () -> new ModBoatItem(true, ModBoatEntity.Type.PINE, new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> DICE = ITEMS.register("dice",
+            () -> new DiceItem(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
