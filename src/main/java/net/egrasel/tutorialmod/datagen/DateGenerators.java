@@ -1,6 +1,7 @@
 package net.egrasel.tutorialmod.datagen;
 
 import net.egrasel.tutorialmod.TutorialMod;
+import net.egrasel.tutorialmod.worldgen.ModBiomeModifiers;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -34,5 +35,7 @@ public class DateGenerators {
         generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
 
         generator.addProvider(event.includeServer(), new ModPoiTypeTagsProvider(packOutput, lookupProvider, existingFileHelper));
+
+        generator.addProvider(event.includeServer(),  new ModWorldGenProvider(packOutput, lookupProvider));
     }
 }
