@@ -91,6 +91,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.PINE_CHEST_BOAT.get());
 
                         pOutput.accept(ModItems.DICE.get());
+
+                        pOutput.accept(ModBlocks.PINE_SAPLING.get());
                     })
                     .build());
 
