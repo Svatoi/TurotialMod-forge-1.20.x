@@ -90,6 +90,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PINE_CHEST_BOAT);
 
         simpleItem(ModItems.DICE);
+
+        saplingItem(ModBlocks.PINE_SAPLING);
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
@@ -131,6 +133,12 @@ public class ModItemModelProvider extends ItemModelProvider {
                         .texture("layer0", modLoc("item/" + itemRegistryObject.getId().getPath()));
             });
         }
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(TutorialMod.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

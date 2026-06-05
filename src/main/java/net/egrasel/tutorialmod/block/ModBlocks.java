@@ -5,6 +5,7 @@ import net.egrasel.tutorialmod.block.custom.*;
 import net.egrasel.tutorialmod.item.ModItems;
 import net.egrasel.tutorialmod.sound.ModSounds;
 import net.egrasel.tutorialmod.util.ModWoodTypes;
+import net.egrasel.tutorialmod.worldgen.tree.PineTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -148,6 +149,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DICE_BLOCK = BLOCKS.register("dice_block",
             () -> new DiceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable()));
+
+    public static final RegistryObject<Block> PINE_SAPLING = registerBlock("pine_sapling",
+            () -> new SaplingBlock(new PineTreeGrower(), BlockBehaviour.Properties.copy(Blocks.ACACIA_SAPLING)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
