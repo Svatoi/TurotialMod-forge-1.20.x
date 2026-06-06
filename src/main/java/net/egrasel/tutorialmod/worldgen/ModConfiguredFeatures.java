@@ -2,6 +2,7 @@ package net.egrasel.tutorialmod.worldgen;
 
 import net.egrasel.tutorialmod.TutorialMod;
 import net.egrasel.tutorialmod.block.ModBlocks;
+import net.egrasel.tutorialmod.worldgen.tree.custom.PineFoliagePlacer;
 import net.egrasel.tutorialmod.worldgen.tree.custom.PineTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -54,7 +55,7 @@ public class ModConfiguredFeatures {
                 new PineTrunkPlacer(5, 4, 3),
 
                 BlockStateProvider.simple(ModBlocks.PINE_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
+                new PineFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
                 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
     }

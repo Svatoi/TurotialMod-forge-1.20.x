@@ -15,6 +15,7 @@ import net.egrasel.tutorialmod.screen.ModMenuTypes;
 import net.egrasel.tutorialmod.sound.ModSounds;
 import net.egrasel.tutorialmod.util.ModWoodTypes;
 import net.egrasel.tutorialmod.villager.ModVillagers;
+import net.egrasel.tutorialmod.worldgen.tree.ModFoliagePlacer;
 import net.egrasel.tutorialmod.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
@@ -65,6 +66,7 @@ public class TutorialMod
         ModRecipes.register(modEventBus);
 
         ModTrunkPlacerTypes.register(modEventBus);
+        ModFoliagePlacer.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
 
