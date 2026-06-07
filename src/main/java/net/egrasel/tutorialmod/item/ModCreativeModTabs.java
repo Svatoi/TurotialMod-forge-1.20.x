@@ -67,6 +67,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.SAPPHIRE_DOOR.get());
                         pOutput.accept(ModBlocks.SAPPHIRE_TRAPDOOR.get());
 
+                        pOutput.accept(ModBlocks.MOD_PORTAL.get());
+
                         pOutput.accept(ModItems.SAPPHIRE_HELMET.get());
                         pOutput.accept(ModItems.SAPPHIRE_CHESTPLATE.get());
                         pOutput.accept(ModItems.SAPPHIRE_LEGGINGS.get());
