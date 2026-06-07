@@ -15,6 +15,8 @@ import net.egrasel.tutorialmod.screen.ModMenuTypes;
 import net.egrasel.tutorialmod.sound.ModSounds;
 import net.egrasel.tutorialmod.util.ModWoodTypes;
 import net.egrasel.tutorialmod.villager.ModVillagers;
+import net.egrasel.tutorialmod.worldgen.biome.ModTerrablender;
+import net.egrasel.tutorialmod.worldgen.biome.surface.ModSurfaceRules;
 import net.egrasel.tutorialmod.worldgen.tree.ModFoliagePlacer;
 import net.egrasel.tutorialmod.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -36,6 +38,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -64,9 +67,10 @@ public class TutorialMod
         ModMenuTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
-
         ModTrunkPlacerTypes.register(modEventBus);
+
         ModFoliagePlacer.register(modEventBus);
+        ModTerrablender.registerBiomes();
 
         ModBlockEntities.register(modEventBus);
 
@@ -79,6 +83,8 @@ public class TutorialMod
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CATMINT.getId(), ModBlocks.POTTED_CATMINT);
+
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
         });
     }
 
